@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoundTable6</title>
+
+    <!-- css 파일 -->
+    <link rel="stylesheet" type="text/css" href="Main-style-6.css">
+
+    <!-- cdn 파일 -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+    <script src="https://imagesloaded.desandro.com/imagesloaded.pkgd.min.js"></script>
+
+</head>
+
+<body>
+    <div>
+        <header class="menubar">
+            <div class="icon-frame">
+                <img>
+            </div>
+            <div class="menu-frame">
+                <a>Home
+                    <div class="underline"></div>
+                </a>
+                <a>RoundTable
+                    <div class="underline"></div>
+                </a>
+                <a>Project
+                    <div class="underline"></div>
+                </a>
+                <a>Recruit
+                    <div class="underline"></div>
+                </a>
+            </div>
+            <div class="menu-icon-frame" onclick="toggleMenu()">
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+            </div>
+        </header>
+
+
+        <aside>
+            <div class="contact-icon"></div>
+            <div class="contact-txt">Contact us</div>
+        </aside>
+
+        <section id="main">
+            <div class="main-back-img bg"></div>
+            <div class="gradient-full"></div>
+
+            <div class="main-txt-container">
+                <div class="main-txt-animation1">지역사회의 소통을 이끄는</div>
+                <div class="main-txt-animation2">대학연합 퍼실리테이션 동아리</div>
+                <div class="main-txt-animation3">RoundTable</div>
+                <div class="view-more main-txt-animation4">
+                    <button class="view-more-txt">View More</button>
+                    <div class="plus-icon"></div>
+                </div>
+            </div>
+        </section>
+
+        <div id="gallery">
+            <div class="gallery-container">
+                <section class="gallery-txt">
+                    <div class="gallery-wrap text">
+                        RoundTableRoundTable
+                    </div>
+                </section>
+                <section class="gallery-img">
+                    <ul class="gallery-wrap">
+                        <li>
+                            <img src="imagesource/seoul/seoul1.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul2.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul3.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul4.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                    </ul>
+                </section>
+                <section class="gallery-img">
+                    <ul class="gallery-wrap">
+
+                        <li>
+                            <img src="imagesource/seoul/seoul5.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul6.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul7.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul8.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                    </ul>
+                </section>
+                <section class="gallery-img">
+                    <ul class="gallery-wrap">
+                        <li>
+                            <img src="imagesource/seoul/seoul9.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul10.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul11.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul12.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                    </ul>
+                </section>
+                <section class="gallery-img">
+                    <ul class="gallery-wrap">
+                        <li>
+                            <img src="imagesource/seoul/seoul13.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul14.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul15.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                        <li>
+                            <img src="imagesource/seoul/seoul16.jpg"
+                                width="700" height="400" alt="Image description">
+                        </li>
+                    </ul>
+                </section>
+                <section class="gallery-txt">
+                    <div class="gallery-wrap text">
+                        RoundTableRoundTable
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+
+        <section id="ft">
+            <div class="ft-txt-wrap">
+                <p class="ft-txt1">What is <span class="highlight">Facilitation</span></p>
+                <p class="ft-txt2"> <span class="highlight">Facilitation</span> is to plan and conduct meetings and
+                    workshops so that all participants
+                    can freely express their opinions and participate in decision-making effectively under the principle
+                    that <span class="highlight">all opinions are equally valuable</span></p>
+                <p class="ft-txt3">퍼실리테이션은 '모든 의견은 동등하게 귀중하다'는 원칙 속에서 모든 참석자가 자유롭게 의견을 개진하고 효과적으로 의사결정에 참여할 수 있도록 회의나
+                    워크숍을 기획하고 진행하는 일입니다.</p>
+            </div>
+            <div class="gradient-circle1"></div>
+            <div class="gradient-circle2"></div>
+        </section>
+
+        <section id="rt">
+            <div class="gradient-circle3"></div>
+            <div class="gradient-circle4"></div>
+            
+            <div class="rt-txt-container">
+                <div class="rt-txt-title">Goal</div>
+                <p>RoundTable은 이러한 목표를 가지고 있습니다.</p>
+            </div>
+
+
+            <div class="rt-wrap">
+
+                <div class="rt-card">
+                    <div class="rt-card-title">소통역량과 성공경험</div>
+                    <p>퍼실리테이션을 통한 수평적이고 효율적인 소통 역량과 <br>이를 통한 성공 경험을 추구합니다.</p>
+                    <div class="rt-card-icon"></div>
+                </div>
+                <div class="rt-line"></div>
+
+                <div class="rt-card">
+                    <div class="rt-card-title">대학 문화 촉진</div>
+                    <p>이런 퍼실리테이션이 대학문화에 퍼지길 원한다.</p>
+                    <div class="rt-card-icon"></div>
+                </div>
+                <div class="rt-line"></div>
+
+                <div class="rt-card">
+                    <div class="rt-card-title">네트워크 형성</div>
+                    <p>대학생 퍼실리테이터들의 네트워크를 형성합니다.</p>
+                    <div class="rt-card-icon"></div>
+                </div>
+                <div class="rt-line"></div>
+
+                <div class="rt-card">
+                    <div class="rt-card-title">긍정적 사회 효과</div>
+                    <p>대학생을 넘어서 지역사회 전체에 이로운 영향을 추구한다.</p>
+                    <div class="rt-card-icon"></div>
+                </div>
+               
+            </div>
+            
+
+        </section>
+
+        <section id="can">
+            <div class="can-txt">What we can
+                <div class="can-p">주로 이런 상황에서 퍼실리테이션을 사용합니다.</div>
+            </div>
+
+            <div class="can-box-container">
+                <div class="can-box">
+                    <div class="can-box-txt-wrap">
+                        <div class="index">1</div>
+                        <div class="title">VMA workshop</div>
+                        <div class="detail">VMA 워크숍에선 무엇무엇을 할수 있다.</div>
+                        <div class="tag-wrap">
+                            <div class="tag">필요한 상황 1</div>
+                            <div class="tag">필요한 상황 2</div>
+                            <div class="tag">필요한 상황 3</div>
+                        </div>
+                    </div>
+                    <div class="can-icon"></div>
+                </div>
+                <div class="can-box">
+                    <div class="can-box-txt-wrap">
+                        <div class="index">2</div>
+                        <div class="title">팀빌딩 workshop</div>
+                        <div class="detail">팀빌딩 워크숍에선 무엇무엇을 할수 있다.</div>
+                        <div class="tag-wrap">
+                            <div class="tag">필요한 상황 1</div>
+                            <div class="tag">필요한 상황 2</div>
+                            <div class="tag">필요한 상황 3</div>
+                        </div>
+                    </div>
+                    <div class="can-icon"></div>
+                </div>
+                <div class="can-box">
+                    <div class="can-box-txt-wrap">
+                        <div class="index">3</div>
+                        <div class="title">조직문화 workshop</div>
+                        <div class="detail">조직문화 워크숍에선 무엇무엇을 할수 있다.</div>
+                        <div class="tag-wrap">
+                            <div class="tag">필요한 상황 1</div>
+                            <div class="tag">필요한 상황 2</div>
+                            <div class="tag">필요한 상황 3</div>
+                        </div>
+                    </div>
+                    <div class="can-icon"></div>
+                </div>
+                <div class="can-box">
+                    <div class="can-box-txt-wrap">
+                        <div class="index">4</div>
+                        <div class="title">시민참여 workshop</div>
+                        <div class="detail">시민참여 워크숍에선 무엇무엇을 할수 있다.</div>
+                        <div class="tag-wrap">
+                            <div class="tag">필요한 상황 1</div>
+                            <div class="tag">필요한 상황 2</div>
+                            <div class="tag">필요한 상황 3</div>
+                        </div>
+                    </div>
+                    <div class="can-icon"></div>
+                </div>
+                <div class="can-box">
+                    <div class="can-box-txt-wrap">
+                        <div class="index">5</div>
+                        <div class="title">역할분배 workshop</div>
+                        <div class="detail">역할분배 워크숍에선 무엇무엇을 할수 있다.</div>
+                        <div class="tag-wrap">
+                            <div class="tag">필요한 상황 1</div>
+                            <div class="tag">필요한 상황 2</div>
+                            <div class="tag">필요한 상황 3</div>
+                        </div>
+                    </div>
+                    <div class="can-icon"></div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+
+        <section id="workshop">
+            <div class="workshop-slider">
+                <div class="slider-col">
+                    <div class="col-img-wrap">
+                        <div class="col-img-opacity"></div>
+                        <img class="col-img"
+                            src="imagesource/close-up-1845247.jpg">
+                    </div>
+                    <div class="col-txt">
+                        <div class="col-title">Internal Workshop</div>
+                        <div class="col-side"></div>
+                    </div>
+                    <div class="col-keyword-wrap">
+                        <div class="col-keyword">키워드1</div>
+                        <div class="col-keyword">키워드2</div>
+                        <div class="col-keyword">키워드3</div>
+                    </div>
+                    <div class="col-num">1</div>
+                </div>
+
+                <div class="slider-col">
+                    <div class="col-img-wrap">
+                        <div class="col-img-opacity"></div>
+                        <img class="col-img"
+                            src="imagesource/architecture-888133.jpg">
+
+                    </div>
+                    <div class="col-txt">
+                        <div class="col-title">Project Workshop</div>
+                        <div class="col-side"></div>
+                    </div>
+                    <div class="col-keyword-wrap">
+                        <div class="col-keyword">키워드1</div>
+                        <div class="col-keyword">키워드2</div>
+                        <div class="col-keyword">키워드3</div>
+                    </div>
+                    <div class="col-num">2</div>
+                </div>
+
+                <div class="slider-col">
+                    <div class="col-img-wrap">
+                        <div class="col-img-opacity"></div>
+                        <img class="col-img"
+                            src="imagesource/text-image2.webp">
+                    </div>
+                    <div class="col-txt">
+                        <div class="col-title">Social Activity</div>
+                        <div class="col-side"></div>
+                    </div>
+                    <div class="col-keyword-wrap">
+                        <div class="col-keyword">키워드1</div>
+                        <div class="col-keyword">키워드2</div>
+                        <div class="col-keyword">키워드3</div>
+                    </div>
+                    <div class="col-num">3</div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="review">
+
+            <div class="review-txt-wrap">
+                <div class="review-txt-main">Review</div>
+                <div class="review-txt-side">지금까지 함께했던 동아리원들과 고객들의 리뷰에요</div>
+            </div>
+
+            <div class="review-card-container">
+                <div class="review-card-track">
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-before">
+                            <div class="quotes">"</div>
+                            <p class="review-summary">한줄 요약</p>
+                            <div class="quotes">"</div>
+                        </div>
+
+                        <div class="review-after">
+                            <p class="review-detail">자세히</p>
+                            <h3 class="reviewer">1기 누구누구</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <footer id="footer">
+            <div class="footer-txt">
+                <h3>RoundTable</h3>
+                <p>대학연합 퍼실리테이션 동아리 RoundTable</p>
+                <p>
+                    <회칙 링크>
+                </p>
+
+            </div>
+            <div class="footer-icon-container">
+                <div class="footer-icon-wrap">
+                    <div class="insta footer-icon">
+                    </div>
+                    <div class="kakao footer-icon">
+                    </div>
+                </div>
+                <p>xxxxxx@naver.com</p>
+            </div>
+        </footer>
+
+    </div>
+    <script src="animate6.js"></script>
+    <script src="projectSlider.js"></script>
+    <script src="reviewSlider.js"></script>
+    <script src="underline.js"></script>
+    <script src="gallerytransform.js"></script>
+    <script src="reviewInfinite.js"></script>
+</body>
+
+
+</html>

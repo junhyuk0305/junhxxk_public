@@ -1,0 +1,1048 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: 'NanumSquare';
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-style: 'normal';
+    src: url("realindex/nanum-all/나눔 글꼴/나눔스퀘어/NanumFontSetup_TTF_SQUARE/NanumSquareB.ttf");
+}
+
+:root {}
+
+/*메뉴바*/
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    color: white;
+}
+
+.menubar {
+    width: 100%;
+    height: 6rem;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    overflow-x: hidden;
+}
+
+/*동아리 아이콘*/
+.icon-frame {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(215, 174, 163);
+    margin-left: 3rem;
+}
+
+/*menu*/
+.menu-frame {
+    color: white;
+    display: flex;
+    gap: 20px
+}
+
+.menu-frame a {
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
+.menu-frame a:hover {
+    color: #F7EC59;
+}
+
+.underline {
+    position: absolute;
+    left: 0;
+    bottom: 1;
+    height: 2px;
+    width: 0;
+    background-color: #F7EC59;
+    transition: width 0.3s ease-out;
+}
+
+
+/* menu icon 여기 x로 변하는 효과 안됨.*/
+.menu-icon-frame {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 3rem;
+}
+
+
+.menu-icon-line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0 0 0;
+    border-radius: 10px 10px 10px 10px;
+    transition: transform 0.5s cubic-bezier(0.1, 0.1, 0, 0.2);
+    /* 오타 수정 */
+}
+
+.menu-icon-frame:hover .menu-icon-line{
+    background-color: #F7EC59;
+    
+}
+
+.menu-icon.active .menu-icon-line:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 8px);
+}
+
+.menu-icon.active .menu-icon-line:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .menu-icon-line:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+
+/* contact icon  */
+aside {
+    position: fixed;
+    bottom: 3rem;
+    right: 2.5rem;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+}
+
+.contact-icon {
+    background-color: rgb(209, 164, 164);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.contact-txt {
+    color: white;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+
+/* main페이지 */
+#main {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.main-back-img {
+    background-image: url("imagesource/text-image1.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.gradient-full {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom,
+            rgba(18,20,24, 0.1),
+            rgba(18,20,24, 1));
+}
+
+.main-txt-container {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.main-txt-animation1 {
+    color: white;
+    font-size: 3.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.main-txt-animation2 {
+    color: white;
+    font-size: 3.5rem;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.main-txt-animation3 {
+    color: white;
+    font-size: 3.5rem;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.main-txt-animation4 {
+    color: white;
+    opacity: 0;
+    animation: fadeIn 2.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* viewmore +icon */
+.view-more {
+    display: flex;
+    align-items: center;
+}
+
+.view-more-txt {
+    font-size: 1rem;
+    margin-left: 5px;
+}
+
+.view-more-txt:hover{
+    color:#F7EC59;
+}
+
+.plus-icon {
+    margin-left: 5px;
+    margin-top: 3px;
+    width: 0;
+    height: 3px;
+    position: relative;
+    background-color: white;
+    transition: plustLine 0.3s;
+}
+
+.view-more:hover .plus-icon {
+    animation: drawLine 0.5s cubic-bezier(0, 0.1, 0.5, 1) forwards;
+    background-color: #F7EC59;
+}
+
+@keyframes plusLine {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 40px;
+    }
+}
+
+
+
+/* gallery*/
+#gallery {
+    overflow: hidden;
+    background-color: #121418;
+    padding-bottom: 100px;
+}
+
+.gallery-container {
+    overflow-x: hidden;
+}
+
+.gallery-img{
+    height: 400px;
+}
+.gallery-img img {
+    width: 100%;
+    height: 400px;
+    background: #f0f0f0;
+    object-fit: cover;
+}
+
+
+.gallery-img ul {
+    padding-left: 1rem;
+    list-style: none;
+}
+
+.gallery-img li {
+    flex-shrink: 0;
+    width: clamp(500px, 60vw, 700px);
+    padding-right: 1rem;
+}
+
+.gallery-wrap {
+    display: flex;
+
+}
+
+.gallery-img:not(.last) {
+    padding-bottom: 1rem;
+}
+
+.gallery-txt{
+    overflow: hidden;
+}
+
+.gallery-txt .text {
+    font-size: clamp(8rem, 15vw, 16rem);
+    line-height: 1;
+    font-weight: 900;
+    
+}
+
+
+
+
+
+
+
+
+
+
+/*ft*/
+
+#ft {
+    position: relative;
+    background-color: #121418;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.ft-txt-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32rem;
+    padding-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+
+}
+
+.highlight {
+    color: #F7EC59;
+}
+
+
+.ft-txt1 {
+    font-size: 3em;
+    font-weight: 700;
+    text-align: center;
+    opacity: 0;
+}
+
+.ft-txt2 {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0;
+}
+
+.ft-txt3 {
+    font-size: 0.9em;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(182, 182, 182);
+    margin-top: 20px;
+    opacity: 0;
+}
+
+.gradient-circle1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(-180px, 180px);
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(45deg, rgba(231, 232, 232, 0) 35%, rgba(231, 232, 232, 1) 100%);
+    opacity: 0;
+}
+
+.gradient-circle2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(250px, 250px);
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    background: linear-gradient(315deg, rgba(231, 232, 232, 0) 35%, rgba(231, 232, 232, 1) 100%);
+    opacity: 0;
+}
+
+
+
+
+
+/*rt page*/
+
+#rt {
+    
+    background-color: #121418;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 10%;
+    position: relative;
+}
+
+.gradient-circle3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-180px, -270px);
+    border-radius: 50%;
+    width: 450px;
+    height: 450px;
+    background: linear-gradient(45deg, rgba(231, 232, 232, 0) 35%, rgba(231, 232, 232, 1) 100%);
+}
+
+.gradient-circle4 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(250px, -450px);
+    border-radius: 50%;
+    width: 700px;
+    height: 700px;
+    background: linear-gradient(315deg, rgba(231, 232, 232, 0) 35%, rgba(231, 232, 232, 1) 100%);
+}
+
+
+.rt-txt-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.rt-txt-title {
+    font-size: 7rem;
+    font-weight: 1100;
+    padding-bottom: 20px;
+}
+
+.rt-txt-container p{
+    font-size: 1rem;
+    font-weight: 700;
+    color: #CEC0C0;
+    
+}
+
+.rt-wrap{
+    display: flex;
+    gap: 30px;
+    padding-top: 100px;
+}
+
+.rt-card{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding:2rem 1rem;
+}
+
+.rt-card-title{
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.rt-card p{
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: auto;
+}
+
+.rt-card-icon{
+    background-color: #CEC0C0;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    padding-bottom: 20px;
+}
+
+.rt-line{
+    height: 400px;
+    width: 1px;
+    background-color: white;
+}
+
+
+/*can*/
+
+#can{
+    display: flex;
+    padding: 10rem 5%;
+    background-color: #121418;
+    position:relative;
+    height: 220vh;
+}
+
+.can-txt{
+    color: #ffffff;
+    font-size: 4rem;
+    font-weight: 800;
+    width: 50%;
+    height: 10rem;
+    position:sticky;
+    top: 10rem;
+    left: 10%;
+    opacity: 0;
+}
+
+.can-txt .can-p{
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    opacity: 0;
+}
+
+.can-box-container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+    max-height: calc(100vh - 10rem); 
+}
+.can-box{
+    width: 100%;
+    background-color: #545456;
+    border-radius: 30px;
+    display: flex;
+    padding: 2rem 2rem 1rem 2rem
+}
+
+.can-box-txt-wrap{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.can-box-txt-wrap .index{
+    font-size: 1rem;
+    
+}
+
+.can-box-txt-wrap .title{
+    font-size: 2.5rem;
+}
+
+.can-box-txt-wrap .detail{
+    font-size: 1.2rem;
+}
+
+.tag-wrap{
+    display: flex;
+    margin-top: auto;
+    justify-content: space-between;
+    padding-top: 2rem;
+}
+
+.tag-wrap .tag{
+    border: 2px solid #ffffff;
+    border-radius: 100px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition:0.2s ease-in-out;
+}
+
+.tag-wrap .tag:hover{
+    border: 2px solid #F7EC59;
+    color:#F7EC59;
+}
+
+.can-icon{
+    width: 50px;
+    height: 50px;
+    background-color: #F7EC59;
+    margin-left: auto;
+}
+
+
+
+
+
+
+#workshop {
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+}
+
+:root {
+    --primary: rgb(240, 246, 255);
+    --secondary: #212121;
+    --border: 1px solid #212121;
+
+    --ease: cubic-bezier(0.255, 0.666, 0.02, 0.955);
+    --transition-width: width 0.64s var(--ease);
+    --transition-opacity: opacity 1.2s var(--ease);
+    --transition-transform: transform 1.2s var(--ease);
+}
+
+.workshop-slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.slider-col {
+    position: relative;
+    width: 70rem;
+    border-right: var(--border);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    cursor: pointer;
+    transition: var(--transition-width);
+    overflow: hidden;
+}
+
+.slider-col:last-child {
+    border: none;
+}
+
+/* 이게 마우스 올렸을때 밀리는 효과 */
+.slider-col.active {
+    width: 200rem;
+    transition: var(--transition-width);
+    transform-origin: left;
+}
+
+.slider-col.active .col-img-wrap {
+    opacity: 1;
+    transition: var(--transition-opacity);
+}
+
+.col-img-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.7;
+    transition: var(--transition-opacity);
+}
+
+.col-img-wrap::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: var(--primary);
+    opacity: 0;
+}
+
+img.col-img {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+    object-fit: left bottom;
+}
+
+.col-img-opacity {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #121418;
+    opacity: 0.5;
+    z-index: 5;
+}
+
+.col-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    height: 8rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+}
+
+.col-keyword-wrap{
+    padding: 18rem 3rem 0;
+    display: flex;
+    justify-content: center;
+    white-space: nowrap;
+    gap: 30px;
+}
+
+.col-keyword{
+    border: 2px solid #ffffff;
+    border-radius: 100px;
+    padding: 1rem 2rem;
+}
+.col-keyword.active{
+
+}
+
+
+
+.col-num {
+    text-align: left;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    padding-top: 4rem;
+    padding-left: 1rem;
+}
+
+.col-title {
+    font-weight: 800;
+    font-size: 3rem;
+    color: white;
+    padding-bottom: 1rem;
+}
+
+.col-side {
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*review*/
+
+#review {
+    background-color: #efeff2;
+    overflow: hidden;
+    padding: 5rem 0;
+}
+
+.review-txt-wrap {
+    padding: 5rem 10%;
+    font-size: 3rem;
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.review-txt-main{
+    color: #121418;
+}
+.review-txt-wrap .review-txt-side {
+    font-size: 1rem;
+    color: #545456;
+}
+
+
+
+/* 리뷰 카드 */
+
+
+.review-card-container {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* .review-card-container::before,
+.review-card-container::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 400px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+} */
+
+.review-card-container::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.review-card-container::before {
+    left: 0;
+    top: 0;
+}
+
+.review-card-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    gap: 30px;
+    width: calc(400px * 14);
+    background-color: #efeff2;
+    height: auto;
+}
+
+
+
+.review-card {
+    position: relative;
+    height: 300px;
+    width: 400px;
+    padding: 2rem;
+    border-radius: 40px;
+    background-color: #E3DD61;
+    overflow: hidden;
+    transition: transform 0.3s ease; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-before, .review-after {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1; /* 기본적으로 표시되도록 설정 */
+    transition: opacity 0.2s ease-in-out; /* 투명도 전환 효과 추가 */
+}
+
+.review-after {
+    opacity: 0; /* 초기에는 숨김 */
+}
+
+.review-card:hover .review-before {
+    opacity: 0;
+}
+
+.review-card:hover .review-after {
+    opacity: 1;
+}
+
+
+
+
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 7));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #121418;
+    height: 120px;
+}
+
+.footer-txt {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-txt h3 {
+    color: white;
+}
+
+.footer-txt p {
+    color: white;
+}
+
+.footer-icon-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-icon-wrap {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-icon {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+}
+
+.footer-icon-container p {
+    color: white;
+    font-weight: 700;
+}
+
+.opacity-full {
+    background-color: #121418;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+.opacity-slider {
+    background-color: #121418;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+.aninup {
+    animation: fadeInUp 0.5s ease-in-out forwards;
+}
+
+.aninleft {
+    animation: fadeInleft 1s ease-in-out forwards;
+    opacity: 1;
+}
+
+.aninline {
+    animation: drawftLine 2s cubic-bezier(0.1, 0.1, 0, 1) forwards;
+}
+
+.anin {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.anoutright{
+    animation: fadeOutRight 1s ease-in-out forwards;
+}
+
+@keyframes fadeOutRight{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translateX(5%);
+    }
+}
+
+@keyframes drawftLine {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 95%;
+
+    }
+}
+
+@keyframes drawLine {
+    to {
+        width: 50px;
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInleft {
+    from {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(10);
+    }
+}
